@@ -5,8 +5,7 @@ MangoesAi Playground on several client-facing projects.
 
 ## Key Features
 
-### Feature 1 - Quick Start
-#### Voice Registration
+### Feature 1 - Voice Registration
 - **Model used**: SpeechBrain  
 - **Procedure**:  
   1. Register the user's voice (3~6s voice is needed).  
