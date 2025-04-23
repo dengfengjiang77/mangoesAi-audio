@@ -1,5 +1,4 @@
-# mangoesAi-audio
-MangoesAi Playground on several client-facing projects.
+# MediSync AI: A Multi-Modal Framework for Structured Information Extraction from Group Therapy Conversations
 
 ---
 
