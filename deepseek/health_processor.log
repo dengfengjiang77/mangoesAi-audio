@@ -1,0 +1,76 @@
+2025-04-20 22:37:10,107 - health_processor - INFO - Processing therapy conversation with DeepSeek API...
+2025-04-20 22:37:10,107 - health_processor - INFO - Processing conversation with 5 speakers
+2025-04-20 22:37:10,107 - health_processor - INFO - Extracting general therapeutic information
+2025-04-20 22:37:10,107 - health_processor - INFO - Sending request to DeepSeek API with prompt length: 7013
+2025-04-20 22:37:11,065 - health_processor - ERROR - API request failed: 402 - {"error":{"message":"Insufficient Balance","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+2025-04-20 22:37:11,066 - health_processor - ERROR - Error calling DeepSeek API
+Traceback (most recent call last):
+  File "/Users/7one/Documents/Work/mangoesai/audioAi/deepseek/deepseekapi.py", line 86, in extract_health_information
+    raise Exception(error_msg)
+Exception: API request failed: 402 - {"error":{"message":"Insufficient Balance","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+2025-04-20 22:37:11,068 - health_processor - ERROR - Error processing conversation
+Traceback (most recent call last):
+  File "/Users/7one/Documents/Work/mangoesai/audioAi/deepseek/deepseekapi.py", line 312, in process_conversation
+    general_info = self.deepseek_client.extract_health_information(
+        conversation_text, general_prompt
+    )
+  File "/Users/7one/Documents/Work/mangoesai/audioAi/deepseek/deepseekapi.py", line 86, in extract_health_information
+    raise Exception(error_msg)
+Exception: API request failed: 402 - {"error":{"message":"Insufficient Balance","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+2025-04-20 22:37:11,068 - health_processor - ERROR - Failed to process therapy diarization
+Traceback (most recent call last):
+  File "/Users/7one/Documents/Work/mangoesai/audioAi/deepseek/deepseekapi.py", line 599, in process_therapy_diarization
+    processed_data = processor.process_conversation(raw_diarization)
+  File "/Users/7one/Documents/Work/mangoesai/audioAi/deepseek/deepseekapi.py", line 312, in process_conversation
+    general_info = self.deepseek_client.extract_health_information(
+        conversation_text, general_prompt
+    )
+  File "/Users/7one/Documents/Work/mangoesai/audioAi/deepseek/deepseekapi.py", line 86, in extract_health_information
+    raise Exception(error_msg)
+Exception: API request failed: 402 - {"error":{"message":"Insufficient Balance","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+2025-04-20 22:38:51,545 - health_processor - INFO - Processing therapy conversation with DeepSeek API...
+2025-04-20 22:38:51,545 - health_processor - INFO - Processing conversation with 5 speakers
+2025-04-20 22:38:51,545 - health_processor - INFO - Extracting general therapeutic information
+2025-04-20 22:38:51,545 - health_processor - INFO - Sending request to DeepSeek API with prompt length: 7013
+2025-04-20 22:39:48,625 - health_processor - INFO - Extracting relational dynamics information
+2025-04-20 22:39:48,626 - health_processor - INFO - Sending request to DeepSeek API with prompt length: 6763
+2025-04-20 22:40:19,331 - health_processor - INFO - Extracting therapeutic progress information
+2025-04-20 22:40:19,333 - health_processor - INFO - Sending request to DeepSeek API with prompt length: 7287
+2025-04-20 22:40:50,868 - health_processor - WARNING - Failed to parse general_info as JSON
+2025-04-20 22:40:50,868 - health_processor - WARNING - Failed to parse relational_info as JSON
+2025-04-20 22:40:50,869 - health_processor - WARNING - Failed to parse progress_info as JSON
+2025-04-20 22:40:50,869 - health_processor - ERROR - Error processing conversation
+Traceback (most recent call last):
+  File "/Users/7one/Documents/Work/mangoesai/audioAi/deepseek/deepseekapi.py", line 331, in process_conversation
+    combined_info = self._combine_extracted_info(
+        session_id,
+    ...<3 lines>...
+        speaker_mapping
+    )
+  File "/Users/7one/Documents/Work/mangoesai/audioAi/deepseek/deepseekapi.py", line 372, in _combine_extracted_info
+    "session_summary": general_info.get("session_summary", ""),
+                       ^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-04-20 22:40:50,872 - health_processor - ERROR - Failed to process therapy diarization
+Traceback (most recent call last):
+  File "/Users/7one/Documents/Work/mangoesai/audioAi/deepseek/deepseekapi.py", line 599, in process_therapy_diarization
+    processed_data = processor.process_conversation(raw_diarization)
+  File "/Users/7one/Documents/Work/mangoesai/audioAi/deepseek/deepseekapi.py", line 331, in process_conversation
+    combined_info = self._combine_extracted_info(
+        session_id,
+    ...<3 lines>...
+        speaker_mapping
+    )
+  File "/Users/7one/Documents/Work/mangoesai/audioAi/deepseek/deepseekapi.py", line 372, in _combine_extracted_info
+    "session_summary": general_info.get("session_summary", ""),
+                       ^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+2025-04-20 22:54:26,445 - health_processor - INFO - Processing therapy conversation with DeepSeek API...
+2025-04-20 22:54:26,446 - health_processor - INFO - Processing conversation with 5 speakers
+2025-04-20 22:54:26,446 - health_processor - INFO - Extracting general therapeutic information
+2025-04-20 22:54:26,446 - health_processor - INFO - Sending request to DeepSeek API with prompt length: 7127
+2025-04-20 22:54:58,184 - health_processor - INFO - Extracting relational dynamics information
+2025-04-20 22:54:58,186 - health_processor - INFO - Sending request to DeepSeek API with prompt length: 6877
+2025-04-20 22:55:22,489 - health_processor - INFO - Extracting therapeutic progress information
+2025-04-20 22:55:22,491 - health_processor - INFO - Sending request to DeepSeek API with prompt length: 7401
+2025-04-20 22:55:56,200 - health_processor - INFO - Saving processed therapy data to database...
